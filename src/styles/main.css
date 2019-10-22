@@ -4,6 +4,7 @@ html,
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  background-color: #dedede;
 }
 
 * {
@@ -60,7 +61,7 @@ body {
 }
 
 .categories-container {
-  margin: 0 120px;
+  margin: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -71,19 +72,19 @@ body {
   flex-direction: column;
   padding: 26px;
   border-radius: 6px;
-  width: 300px;
-  height: 400px;
+  width: 260px;
+  height: 360px;
   position: relative;
   overflow: hidden;
-  margin: 8px;
+  margin: 18px;
   transition: all 1.2s;
   cursor: pointer;
+  box-shadow: 0 0 3px 2px #8e8e8ebf;
 }
 
 .categories-container .card-category:hover::before {
   transition: all 1.2s;
   filter: blur(0) brightness(0.8);
-  background-position-x: center;
 }
 
 .categories-container .card-category::before {
@@ -100,6 +101,26 @@ body {
   overflow: hidden;
 }
 
+.categories-container .card-category:nth-child(2)::before {
+  background: url('../assets/lazer-bg.jpg') no-repeat;
+}
+
+.categories-container .card-category:nth-child(3)::before {
+  background: url('../assets/moda-bg.jpg') no-repeat;
+}
+
+.categories-container .card-category:nth-child(4)::before {
+  background: url('../assets/diversao-bg.jpg') no-repeat;
+}
+
+.categories-container .card-category:nth-child(5)::before {
+  background: url('../assets/decoracao-bg.jpg') no-repeat;
+}
+
+.categories-container .card-category:nth-child(6)::before {
+  background: url('../assets/alimentacao-bg.jpg') no-repeat;
+}
+
 .categories-container .card-category::after {
   content: '';
   position: absolute;
@@ -109,6 +130,12 @@ body {
   height: 120px;
   background-color: #000b;
   z-index: -1;
+  transition: all 0.8s;
+}
+
+.categories-container .card-category:hover::after {
+  height: 100%;
+  transition: all 0.8s;
 }
 
 .categories-container .card-category span {
@@ -120,4 +147,25 @@ body {
 .categories-container .card-category p {
   color: #bbb;
   font-size: 0.8em;
+}
+
+.categories-container .card-category button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 28px;
+  background-color: #0008;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.categories-container .card-category button:hover {
+  color: #000;
+  background-color: #fff;
+  transition: all 0.6s;
 }
