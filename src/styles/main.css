@@ -58,3 +58,66 @@ body {
   background-color: #fff;
   transition: all 0.4s;
 }
+
+.categories-container {
+  margin: 0 120px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.categories-container .card-category {
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  border-radius: 6px;
+  width: 300px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 8px;
+  transition: all 1.2s;
+  cursor: pointer;
+}
+
+.categories-container .card-category:hover::before {
+  transition: all 1.2s;
+  filter: blur(0) brightness(0.8);
+  background-position-x: center;
+}
+
+.categories-container .card-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: blur(1px) brightness(0.4);
+  background: url('../assets/informatica-bg.jpeg') no-repeat;
+  background-size: cover;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.categories-container .card-category::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background-color: #000b;
+  z-index: -1;
+}
+
+.categories-container .card-category span {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.categories-container .card-category p {
+  color: #bbb;
+  font-size: 0.8em;
+}
